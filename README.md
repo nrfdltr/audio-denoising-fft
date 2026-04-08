@@ -25,12 +25,12 @@ heres how it looks.
 ### time-domain
 *top is the input audio. bottom is after the custom ifft put the pieces back together.*
 
-![Time Domain Comparison](outputs/Sample_01_Speech/time_domain_graph.png)
+![Time Domain Comparison](output/1/time_domain_analysis.png)
 
 ### frequency-domain
 *plotted up to the nyquist frequency. the hamming window stops the "bleeding" -> high magnitudes survive.*
 
-![Frequency Domain Comparison](outputs/Sample_01_Speech/frequency_domain_graph.png)
+![Frequency Domain Comparison](output/1/frequency_domain_analysis.png)
 
 ---
 
