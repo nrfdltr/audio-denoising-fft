@@ -34,7 +34,7 @@ heres how it looks.
 
 ### hamming window visualization
 *graphed to help with understanding of the implementation of hamming window in the fourier.m file.*
-*(based on code provided in 'Signals and Systems for Bioengineers A MATLAB-Based Introduction' by semmlow)*
+*(based on code segments provided in 'Signals and Systems for Bioengineers A MATLAB-Based Introduction' by semmlow)*
 
 ![Hamming window's effect on Spectral leakage](output/hamming/hamming.png)
 
@@ -47,12 +47,12 @@ heres how it looks.
     ```bash
     git clone [https://github.com/nrfdltr/audio-denoising-fft.git](https://github.com/nrfdltr/audio-denoising-fft.git)
     ```
-2.  **run the script:** open matlab and run `denoise_audio.m`
+2.  **run the script:** open matlab and run script`
 3.  i go sleep now. zzzzzZZz
 
 ---
 
 ## references
 * **audio data:** from rajat borkar on kaggle. 
-* **math:** tripathi et al. (2024) for hamming-ola & threshold, harris (1978) for hamming, mota (2022) for dft/fft, wen (2025) for ifft, brunton (2022) for complex conjugate. bonus: semmlow(2022) for the hamming window matlab code
+* **math:** tripathi et al. (2024) for hamming-ola & threshold, harris (1978) for hamming, mota (2022) for dft/fft, wen (2025) for ifft, brunton (2022) for complex conjugate. bonus: semmlow(2012) for the hamming window matlab code
 * **implementation:** followed the *handbook of real-time fast fourier transforms* because the butterfly signal flow diagrams.
