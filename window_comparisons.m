@@ -22,7 +22,7 @@ w_rect(150:350) = 1;
 w_hamm = 0.54 - 0.46 * cos(2*pi*n / (N-1));
 
 %% 3. multiply
-% rectangle
+% ractangle
 x_rect = x .* w_rect;
 
 % hamming
