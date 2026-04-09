@@ -8,7 +8,7 @@ honestly just trying to survive this linear algebra project. made this from-scra
 
 ---
 
-## stuff it does
+## outline
 
 * **custom radix-2 fft:** achieve $O(N \log_2 N)$ efficiency, because the standard $N^2$ dft is very slow.
 * **ifft:** uses the complex conjugate property to flip the spectrum back into the time domain.
@@ -25,12 +25,19 @@ heres how it looks.
 ### time-domain
 *top is the input audio. bottom is after the custom ifft put the pieces back together.*
 
-![Time Domain Comparison](output/1/time_domain_analysis.png)
+![Time Domain Comparison](output/01/time_domain_analysis.png)
 
 ### frequency-domain
 *plotted up to the nyquist frequency. the hamming window stops the "bleeding" -> high magnitudes survive.*
 
-![Frequency Domain Comparison](output/1/frequency_domain_analysis.png)
+![Frequency Domain Comparison](output/01/frequency_domain_analysis.png)
+
+### hamming window visualization
+*graphed to help with understanding of the implementation of hamming window in the fourier.m file.*
+*(based on code provided in 'Signals and Systems for Bioengineers A MATLAB-Based Introduction' by semmlow)*
+
+![Hamming window's effect on Spectral leakage](output/hamming/hamming.png)
+
 
 ---
 
