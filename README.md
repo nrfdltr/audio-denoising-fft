@@ -56,7 +56,7 @@ heres how it looks.
 
 1.  **clone repo:**
     ```bash
-    git clone [https://github.com/nrfdltr/audio-denoising-fft.git](https://github.com/nrfdltr/audio-denoising-fft.git)
+    git clone [https://github.com/nrfdltr/fft-audio-denoising.git](https://github.com/nrfdltr/fft-audio-denoising.git)
     ```
 2.  **run the script:** open matlab and run script
 3.  have fun i go sleep now zzzzzZZz
