@@ -38,7 +38,7 @@ for m = 1:num_frames
     Y_complex(:, m) = custom_fft(frame); 
 end
 
-%% 4. Spectral Subtraction
+%% 4. spectral subtraction
 disp('Applying magnitude thresholding');
 
 % average noise magnitude
