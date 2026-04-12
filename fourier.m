@@ -1,11 +1,11 @@
 % =========================================================================
-% DFT-FFT and Audio Denoising
-% Developed and tested for linear algebra project >:3
+% DFT/FFT FOR AUDIO DENOISING
+% Developed for linear algebra project >:^l
 % =========================================================================
 clear; clc; close all;
 
 %% 1. prep
-% load audio
+% load audio (change audio name according to input)
 [x_noisy, fs] = audioread('noisy_audio_test.wav');
 
 % monophonic audio
@@ -20,7 +20,7 @@ x_noisy = x_noisy(1:max_samples);
 %% 2. hamming
 L = 512;                        % frame length
 H = L / 2;                      % hop size (50% overlap)
-win = custom_hamming(L);        % hamming to prevent spectral leakage
+win = hamming_window(L);        % hamming to prevent spectral leakage
 num_frames = floor((length(x_noisy) - L) / H) + 1;
 
 % pre-allocate complex spectrum array
@@ -92,7 +92,6 @@ end
 x_denoised = x_denoised ./ (window_norm + eps);
 
 %% 6. visualization
-disp('Generating Expected Result Figures...');
 
 % time-domain analysis
 figure('Name', 'Time Domain Analysis', 'Color', 'w');
@@ -133,7 +132,7 @@ x_denoised_norm = x_denoised / max(abs(x_denoised));
 
 output_filename = 'denoised_output.wav';
 audiowrite(output_filename, x_denoised_norm, fs);
-fprintf('Successfully saved to: %s\n', output_filename);
+fprintf('Saved to: %s\n', output_filename);
 
 % =========================================================================
 % LOCAL FUNCTIONS
@@ -165,7 +164,7 @@ function X = custom_fft(x)
     X(N/2+1:N)   = X_even - W_N .* X_odd;
 end
 
-function w = custom_hamming(L)
+function w = hamming_window(L)
     % manual hamming window
     n = (0:L-1)';
     w = 0.54 - 0.46 * cos(2 * pi * n / (L - 1));
