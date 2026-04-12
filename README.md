@@ -64,7 +64,7 @@ heres how it looks. (this one from noisy_audio_test1.wav output, access others a
 
 1.  **clone repo:**
     ```bash
-    git clone [https://github.com/nrfdltr/audio-denoising-fft.git](https://github.com/nrfdltr/audio-denoising-fft.git)
+    git clone [https://github.com/nrfdltr/fft-audio-denoising.git](https://github.com/nrfdltr/fft-audio-denoising.git)
     ```
 2.  **run the script:** open matlab and run script
 3.  have fun i go sleep now zzzzzZZz
@@ -84,4 +84,4 @@ heres how it looks. (this one from noisy_audio_test1.wav output, access others a
     brunton (2022) for complex conjugate theory,
 
     semmlow (2012) for the visuals matlab code.
-* **implementation:** followed the calssical denoising pipeline introduced by tripathi et al. '*quantum fourier transform–based denoising*' to implement into matlab code fourier.m.
+* **implementation:** followed the classical denoising pipeline introduced by tripathi et al. '*quantum fourier transform–based denoising*' to implement into matlab code fourier.m.
