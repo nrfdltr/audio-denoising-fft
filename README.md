@@ -58,6 +58,7 @@ heres how it looks. (this one from noisy_audio_test1.wav output, access others a
 *graphed to help with understanding of the underlying math of ola method and the reason for normalizing using cola sum.*
 
 ![Overlap-add method](output/visual/overlap_add.png)
+
 ---
 
 ## usage
