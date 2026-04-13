@@ -1,4 +1,4 @@
-# audio denoising via custom fft & spectral subtraction (apr2026-sem252)
+# audio denoising via matlab using custom fft and ifft (apr2026-sem252)
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2021a%2B-blue.svg)
 ![Algorithm](https://img.shields.io/badge/Algorithm-Radix--2_FFT-orange.svg)
@@ -29,20 +29,25 @@ honestly just trying to survive this linear algebra project. made the fourier fr
 
 ## visual results
 
-heres how it looks. (this one from noisy_audio_test1.wav output, access others at /data/##/)
+heres how it looks. (all input and output data can be accesed through /data/##/)
 
 ### time-domain
-*top is the input audio. bottom is after the custom ifft put the pieces back together.*
+*top is the input audio. bottom is after the custom ifft put the pieces back together. (output from noisy_audio_test1.wav)*
 
 ![Time Domain Comparison](data/01/time_domain_analysis.png)
 
 ### frequency-domain
-*plotted up to the nyquist frequency. the hamming window stops the bleeding -> high magnitudes survive.*
+*plotted up to the nyquist frequency. the hamming window stops the bleeding -> high magnitudes survive. (output from noisy_audio_test1.wav)*
 
 ![Frequency Domain Comparison](data/01/frequency_domain_analysis.png)
 
-## notice
-**the visualizations from this point onwards are for illustration purposes and werent sampled with real audio files. they are based on code segments provided in 'Signals and Systems for Bioengineers A MATLAB-Based Introduction' by semmlow**
+### other samples
+*these are the outputs from .wav files in folders 03, 04, 06 and 10, in top-down order.*
+
+![Samples output all](data/visual/samples.png)
+
+## ! notice !
+**the visualizations from this point onwards are for illustration purposes and werent sampled with real audio files. they are developed based on code segments provided in 'signals and systems for bioengineers - a matlab-bsed introduction' by j. l. semmlow**
 
 ### hamming window visualization
 *graphed to help with understanding of the implementation of hamming window in the fourier.m file.*
@@ -73,6 +78,7 @@ heres how it looks. (this one from noisy_audio_test1.wav output, access others a
 
 ## references
 * **audio data:** from rajat borkar on kaggle. 
+
 * **math:** tripathi et al. (2024) for denoise pipeline (hamming, mag threshold, cola),
 
     harris (1978) for hamming,
@@ -84,4 +90,5 @@ heres how it looks. (this one from noisy_audio_test1.wav output, access others a
     brunton (2022) for complex conjugate theory,
 
     semmlow (2012) for the visuals matlab code.
+
 * **implementation:** followed the classical denoising pipeline introduced by tripathi et al. '*quantum fourier transform–based denoising*' to implement into matlab code fourier.m.
