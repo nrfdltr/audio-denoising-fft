@@ -1,5 +1,5 @@
 % =========================================================================
-% Effect of Hamming window on spectral leakage
+% EFFECT OF HAMMING WINDOW ON SPECTRAL LEAKAGE
 % Developed for visualization in linear algebra project report *x*
 % =========================================================================
 clear; clc; close all;

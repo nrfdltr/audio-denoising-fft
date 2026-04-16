@@ -1,5 +1,5 @@
 % =========================================================================
-% Overlap-Add (OLA) for final normalizing step
+% OVERLAP-ADD METHOD FOR NORMALIZING
 % Developed for visualization in linear algebra project report
 % =========================================================================
 clear; clc; close all;
