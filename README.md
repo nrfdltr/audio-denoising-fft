@@ -1,4 +1,4 @@
-# audio denoising via matlab using custom fft and ifft (mt1007-sem252)
+# audio denoising via matlab using custom fft and ifft (mt1007-sem252/group3-cc06)
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2021a%2B-blue.svg)
 ![Algorithm](https://img.shields.io/badge/Algorithm-Radix--2_FFT-orange.svg)
@@ -22,7 +22,7 @@ fourier calculations from-scratch without using `fft` or `ifft` functions in mat
 ### gainmask.m
 * visualize gain computation and function properties behaviour for report part 3.3.2
 
-### ola.m
+### overlap_add.m
 * visualize the reason behind the overlap-add method and final normalizing step for report part 3.3.3
 
 ---
