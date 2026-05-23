@@ -22,7 +22,7 @@ fourier calculations from-scratch without using `fft` or `ifft` functions in mat
 ### gainmask.m
 * visualize gain computation and function properties behaviour for report part 3.3.2
 
-### ola.m
+### overlap_add.m
 * visualize the reason behind the overlap-add method and final normalizing step for report part 3.3.3
 
 ---
