@@ -1,7 +1,4 @@
-% =========================================================================
 % DFT/FFT FOR AUDIO DENOISING
-% Developed for linear algebra project >:^l
-% =========================================================================
 clear; clc; close all;
 
 %% 1. prep

@@ -1,7 +1,5 @@
-% =========================================================================
 % OVERLAP-ADD METHOD FOR NORMALIZING
 % Developed for visualization in linear algebra project report
-% =========================================================================
 clear; clc; close all;
 
 %% 1. variables
@@ -94,7 +92,7 @@ for m = 1:num_frames
 end
 
 plot(n, x_unnorm, 'Color', c_blue, 'LineWidth', 2, 'LineStyle', '-');
-title('3A. Unnormalized Accumulation $\tilde{x}[n]$', 'Interpreter', 'latex', 'FontSize', 13);
+title('3A. Unnormalized Sum $\tilde{x}[n] = \sum_{m} \hat{x}_m[n - mH]$ (Eq. 18)', 'Interpreter', 'latex', 'FontSize', 13);
 ylabel('Amplitude'); axis tight; ylim([-1.3 1.3]); grid on;
 set(gca, 'XTickLabel', []);
 
@@ -108,7 +106,7 @@ end
 plot(n, W_sum, 'Color', c_orange, 'LineWidth', 2.5, 'LineStyle', '-');
 h_limit = yline(1.08, 'Color', c_black, 'LineWidth', 1.5, 'LineStyle', '-');
 
-title('3B. $\sum_{m} w[n - mH] = C$', 'Interpreter', 'latex', 'FontSize', 13);
+title('3B. COLA condition $\sum_{m} w[n - mH] = C$ (Eq. 19)', 'Interpreter', 'latex', 'FontSize', 13);
 axis tight; ylim([0 1.4]); grid on;
 set(gca, 'XTickLabel', []);
 legend([h_limit], {'C = 1.08'}, 'Location', 'eastoutside');
@@ -117,7 +115,7 @@ legend([h_limit], {'C = 1.08'}, 'Location', 'eastoutside');
 ax4 = subplot(4, 2, [7, 8]); hold on;
 plot(n, x_final, 'Color', '#cf5eff', 'LineWidth', 2.5, 'LineStyle', '-');
 plot(n, x_unnorm, 'Color', c_blue, 'LineWidth', 1.25, 'LineStyle', '-.');
-title('4. $\hat{x}[n] = \tilde{x}[n] / C$', 'Interpreter', 'latex', 'FontSize', 14);
+title('4. Output comparison (Eq. 20)', 'Interpreter', 'latex', 'FontSize', 14);
 xlabel('Discrete Time Index $n$', 'Interpreter', 'latex', 'FontSize', 12); 
 ylabel('Amplitude'); axis tight; ylim([-1.3 1.3]); grid on;
 legend('Normalized Output', 'Unnormalized Sum', 'Location', 'eastoutside');
