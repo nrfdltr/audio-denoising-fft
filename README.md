@@ -9,7 +9,7 @@ fourier calculations from-scratch without using `fft` or `ifft` functions in mat
 
 ## outline
 
-### fourier.m (main implementation code)
+### fourier.m >>>>>main implementation code<<<<<
 * **custom radix-2 fft:** achieve $O(N \log_2 N)$ efficiency, because the standard $N^2$ dft is very slow.
 * **ifft:** uses the complex conjugate property (see references) to flip the spectrum back into the time domain.
 * **manual hamming windowing:** tapers the frame boundaries to suppress the spectral leakage.
