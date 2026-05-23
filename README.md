@@ -19,7 +19,7 @@ fourier calculations from-scratch without using `fft` or `ifft` functions in mat
 ### hamming_window.m
 * visualize hamming window concept for report part 3.3.1
 
-### gainmask.m
+### gain_mask.m
 * visualize gain computation and function properties behaviour for report part 3.3.2
 
 ### overlap_add.m
