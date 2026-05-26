@@ -17,13 +17,13 @@ fourier calculations from-scratch without using `fft` or `ifft` functions in mat
 * **magnitude thresholding:** used an over-subtraction factor $\alpha = 5.0$ and a spectral floor $\beta = 0.01$.
 
 ### hamming_window.m
-* visualize hamming window concept for report part 3.3.1
+* visualize hamming window concept for report part 3.1
 
 ### gain_mask.m
-* visualize gain computation and function properties behaviour for report part 3.3.2
+* visualize gain computation and function properties behaviour for report part 3.2
 
 ### overlap_add.m
-* visualize the reason behind the overlap-add method and final normalizing step for report part 3.3.3
+* visualize the reason behind the overlap-add method and final normalizing step for report part 3.3
 
 ---
 
