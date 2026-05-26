@@ -27,6 +27,10 @@ fourier calculations from-scratch without using `fft` or `ifft` functions in mat
 
 ---
 
+## audio denoise workflow
+![Workflow Flowchart](data/visual/workflow.png)
+---
+
 ## visual results
 
 heres how it looks. (all input and output data can be accesed through folder /data)
