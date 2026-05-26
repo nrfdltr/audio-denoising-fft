@@ -115,7 +115,7 @@ legend([h_limit], {'C = 1.08'}, 'Location', 'eastoutside');
 ax4 = subplot(4, 2, [7, 8]); hold on;
 plot(n, x_final, 'Color', '#cf5eff', 'LineWidth', 2.5, 'LineStyle', '-');
 plot(n, x_unnorm, 'Color', c_blue, 'LineWidth', 1.25, 'LineStyle', '-.');
-title('4. Output comparison with and without normalization (Eq. 20)', 'Interpreter', 'latex', 'FontSize', 14);
+title('4. Comparison of normalized output $\hat{x}[n] = \frac{\tilde{x}[n]}{C}$ and unnormalized sum $\tilde{x}[n]$', 'Interpreter', 'latex', 'FontSize', 14);
 xlabel('Discrete Time Index $n$', 'Interpreter', 'latex', 'FontSize', 12); 
 ylabel('Amplitude'); axis tight; ylim([-1.3 1.3]); grid on;
 legend('Normalized Output', 'Unnormalized Sum', 'Location', 'eastoutside');

@@ -1,7 +1,5 @@
-% =========================================================================
 % Spectral Subtraction Gain Mask Analysis
 % Demonstrates the tripathi et al. tuning parameters (\alpha and \beta) >:3
-% =========================================================================
 clear; clc; close all;
 
 %% 1. theory of gain
@@ -56,8 +54,8 @@ colors_alpha = {'#0072bd', '#d95319', '#7e2f8e'};
 for i = 1:length(alpha_vals)
     plot(gamma, G_alpha_sweep(i, :), 'Color', colors_alpha{i}, 'LineWidth', 2);
 end
-title('Effect of Over-subtraction Factor ($\alpha$)', 'Interpreter', 'latex', 'FontSize', 13);
-xlabel('Signal-to-Noise Magnitude $\frac{|X_k|}{|\hat{N}_k|}$, with $\beta = 0.01$', 'Interpreter', 'latex');
+title('1A. Effect of Over-subtraction Factor ($\alpha$)', 'Interpreter', 'latex', 'FontSize', 13);
+xlabel('Signal-to-Noise Magnitude $\frac{|X_k|}{|\hat{N}_k|}$ ($\beta = 0.01$)', 'Interpreter', 'latex');
 ylabel('Gain $G_k$', 'Interpreter', 'latex');
 legend('\alpha = 1.0', '\alpha = 3.0', '\alpha = 5.0', 'Location', 'southeast');
 grid on; ylim([0 1.1]);
@@ -68,8 +66,8 @@ colors_beta = {'#fa82e4', '#edb120', '#77ac30'};
 for i = 1:length(beta_vals)
     plot(gamma, G_beta_sweep(i, :), 'Color', colors_beta{i}, 'LineWidth', 2);
 end
-title('Effect of Spectral Floor ($\beta$)', 'Interpreter', 'latex', 'FontSize', 13);
-xlabel('Signal-to-Noise Magnitude $\frac{|X_k|}{|\hat{N}_k|}$, with $\alpha = 5.0$', 'Interpreter', 'latex');
+title('1B. Effect of Spectral Floor ($\beta$)', 'Interpreter', 'latex', 'FontSize', 13);
+xlabel('Signal-to-Noise Magnitude $\frac{|X_k|}{|\hat{N}_k|}$ ($\alpha = 5.0$)', 'Interpreter', 'latex');
 ylabel('Gain $G_k$', 'Interpreter', 'latex');
 legend('\beta = 0.00', '\beta = 0.05', '\beta = 0.15', 'Location', 'southeast');
 grid on; ylim([0 1.1]);
@@ -78,7 +76,7 @@ grid on; ylim([0 1.1]);
 subplot(2, 2, 3);
 plot(freq_axis, X_mag, 'b', 'LineWidth', 1.2); hold on;
 yline(mean_N * alpha_fixed, 'r--', 'LineWidth', 1);
-title('Noisy Spectrum $|X_k|$ vs. Threshold', 'Interpreter', 'latex', 'FontSize', 13);
+title('2A. Noisy Spectrum $|X_k|$ vs. Threshold', 'Interpreter', 'latex', 'FontSize', 13);
 xlabel('Frequency Bin $k$', 'Interpreter', 'latex'); ylabel('Magnitude');
 legend('Noisy Signal $|X_k|$', 'Threshold ($\alpha \cdot |\hat{N}_k|$)', 'Interpreter', 'latex');
 grid on; axis tight; ylim([0 4.5]);
@@ -95,7 +93,7 @@ plot(freq_axis, G_k, 'Color', [1 0.5 0], 'LineWidth', 0.1);
 ylabel('Applied Gain $G_k$', 'Interpreter', 'latex');
 ylim([0 1.1]);
 
-title('Reconstructed Spectrum and Gain Profile', 'Interpreter', 'latex', 'FontSize', 13);
+title('2B. Reconstructed Spectrum and Gain Profile', 'Interpreter', 'latex', 'FontSize', 13);
 xlabel('Frequency Bin $k$', 'Interpreter', 'latex');
 legend('Cleaned Speech $|\hat{S}_k|$', 'Gain $G_k$', 'Interpreter', 'latex');
 grid on; axis tight;

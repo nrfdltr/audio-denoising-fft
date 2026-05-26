@@ -23,7 +23,7 @@ num_frames = floor((length(x_noisy) - L) / H) + 1;
 % pre-allocate complex spectrum array
 Y_complex = zeros(L, num_frames);
 
-%% 3. fft (forward)
+%% 3. fft
 disp('Computing FFT');
 for m = 1:num_frames
 % extract then hamming
@@ -36,8 +36,8 @@ for m = 1:num_frames
     Y_complex(:, m) = custom_fft(frame);
 end
 
-%% 4. spectral subtraction
-disp('Applying magnitude thresholding');
+%% 4. magnitude spectral subtraction
+disp('Applying magnitude spectral subtraction');
 
 % average noise magnitude
 noise_frames = 20; 
@@ -132,9 +132,7 @@ output_filename = 'denoised_output.wav';
 audiowrite(output_filename, x_denoised_norm, fs);
 fprintf('Saved to: %s\n', output_filename);
 
-% =========================================================================
-% LOCAL FUNCTIONS
-% =========================================================================
+
 
 function X = custom_fft(x)
     % FFT algorithm
