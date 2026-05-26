@@ -1,4 +1,4 @@
-% Spectral Subtraction Gain Mask Analysis
+% MAGNITUDE SPECTRAL SUBTRACTION
 % Demonstrates the tripathi et al. tuning parameters (\alpha and \beta) >:3
 clear; clc; close all;
 
